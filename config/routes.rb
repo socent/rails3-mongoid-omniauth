@@ -4,5 +4,7 @@ Rails3MongoidOmniauth::Application.routes.draw do
   match '/signin' => 'sessions#new', :as => :signin
   match '/auth/failure' => 'sessions#failure'
   match '/signout' => 'sessions#destroy', :as => :signout
+
+  root :to => 'home#index'
   
 end
