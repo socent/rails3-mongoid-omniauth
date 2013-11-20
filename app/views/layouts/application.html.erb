@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rails3MongoidOmniauth</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title><%= content_for?(:title) ? yield(:title) : "Rails3MongoidOmniauth" %></title>
+	  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "App_Name" %>">
+	  <%= stylesheet_link_tag "application", :media => "all" %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	  <%= yield(:head) %>
+	</head>
+	<body>
+		<div id="container" class="container">
+		  	<header>
+		  	  	<ul class="hmenu">
+				    <%= render 'shared/navigation' %>
+				    <%= render 'layouts/messages' %>
+				</ul>
+		  	</header>
+			<div id="main" role="main">
+				<%= yield %>
+			</div>
+			<footer>
+			</footer>
+		</div> <!--! end of #container -->
+		<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script> <!--! end of Google Analytics -->
+	</body>
 </html>
