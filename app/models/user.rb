@@ -1,5 +1,4 @@
 class User
-	attr_protected :provider, :uid, :name, :email
 	
 
 	include Mongoid::Document
@@ -7,7 +6,7 @@ class User
 	field :uid, type: String
 	field :name, type: String
 	field :email, type: String
-
+	attr_protected :provider, :uid, :name, :email
 
 	def self.create_with_omniauth(auth)
 		create! do |user|
