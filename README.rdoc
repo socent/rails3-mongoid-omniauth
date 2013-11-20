@@ -1,5 +1,5 @@
-Starter App // OmniAuth & MongoDB | Rails 3.2.14
-==
+== Starter App // OmniAuth & MongoDB | Rails 3.2.14
+
 
 * Single Provider Facebook authentication w/ request to update user profile w/ email if not provided.
 
@@ -7,4 +7,4 @@ Starter App // OmniAuth & MongoDB | Rails 3.2.14
 
 * Requires installation of MongoDB datastore (I use Homebrew). 
 
- Credit: [Rails Tutorial For OmniAuth With Mongoid](http://railsapps.github.io/tutorial-rails-mongoid-omniauth.html "Rails Tutorial For OmniAuth With Mongoid") by RailsApp Project.
+[Rails Tutorial For OmniAuth With Mongoid](http://railsapps.github.io/tutorial-rails-mongoid-omniauth.html) by RailsApp Project.
